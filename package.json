@@ -1,0 +1,28 @@
+{
+  "name": "documark-relative-paths",
+  "version": "0.1.0",
+  "description": "Documark plugin for prepending relative paths with the base path.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauvm/documark-relative-paths.git"
+  },
+  "keywords": [
+    "documark",
+    "relative",
+    "absolute",
+    "path",
+    "basedir"
+  ],
+  "author": {
+    "name": "Maurits van Mastrigt"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mauvm/documark-relative-paths/issues"
+  },
+  "homepage": "https://github.com/mauvm/documark-relative-paths"
+}
