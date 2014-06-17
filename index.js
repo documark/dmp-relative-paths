@@ -1,14 +1,22 @@
 /* jslint node: true */
 
-function relativePaths( document ) {
-	document.on( 'plugin:html', function( plugins ) {
-		var basePath = document.getPath();
+function relativePaths( plugin, document ) {
+	plugin.onHTML = function( $, cb ) {
+		var path     = document.path();
+		var relative = /^\/(?!\/)/i;
 
-		plugins.push( function( data, cb ) {
-			data = data.replace( /(<[^>]+[src|href]=['"])\/(?!\/)(.*?)(['"][^>]*>)/gi, '$1' + basePath + '/$2$3' );
-			cb( null, data );
+		$( '[src], [href]' ).each( function() {
+			var $this = $(this);
+			var attr  = ( this.attribs.src !== undefined ? 'src' : 'href' );
+			var url   = $this.attr( attr );
+
+			if( url.match( relative ) ) {
+				$this.attr( attr, path + url );
+			}
 		} );
-	} );
+
+		cb();
+	};
 }
 
 module.exports = relativePaths;
