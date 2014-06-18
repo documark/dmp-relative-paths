@@ -1,6 +1,6 @@
 {
-  "name": "documark-plugin-relative-paths",
-  "version": "0.1.1",
+  "name": "documark-relative-paths",
+  "version": "0.1.3",
   "description": "Documark plugin for prepending relative paths with the base path.",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mauvm/documark-plugin-relative-paths.git"
+    "url": "https://github.com/mauvm/documark-relative-paths.git"
   },
   "keywords": [
+    "documark-plugin",
     "documark",
     "relative",
     "absolute",
@@ -22,7 +23,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mauvm/documark-plugin-relative-paths/issues"
+    "url": "https://github.com/mauvm/documark-relative-paths/issues"
   },
-  "homepage": "https://github.com/mauvm/documark-plugin-relative-paths"
+  "homepage": "https://github.com/mauvm/documark-relative-paths"
 }
