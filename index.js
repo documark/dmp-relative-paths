@@ -1,8 +1,8 @@
 /* jslint node: true */
 
-function relativePaths( plugin, document ) {
+function relativePaths( plugin ) {
 	plugin.onHTML = function( $, cb ) {
-		var path     = document.path();
+		var path     = plugin.document.path();
 		var relative = /^\/(?!\/)/i;
 
 		$( '[src], [href]' ).each( function() {
