@@ -1,22 +1,22 @@
-/* jslint node: true */
+var fs       = require('fs');
+var path     = require('path');
+var absolute = /^(\/|http)/;
 
-function relativePaths( plugin ) {
-	plugin.onHTML = function( $, cb ) {
-		var path     = plugin.document.path();
-		var relative = /^\/(?!\/)/i;
+module.exports = function relativePaths ($, document, cb) {
+	var basePath = document.path();
 
-		$( '[src], [href]' ).each( function() {
-			var $this = $(this);
-			var attr  = ( this.attribs.src !== undefined ? 'src' : 'href' );
-			var url   = $this.attr( attr );
+	$('[src], [href]').each(function () {
+		var $this = $(this);
+		var attr  = (this.attribs.src !== undefined ? 'src' : 'href');
+		var url   = $this.attr(attr);
 
-			if( url.match( relative ) ) {
-				$this.attr( attr, path + url );
+		if ( ! url.match(absolute)) {
+			var filePath = path.resolve(basePath, url);
+			if (fs.existsSync(filePath)) {
+				$this.attr(attr, filePath);
 			}
-		} );
+		}
+	});
 
-		cb();
-	};
-}
-
-module.exports = relativePaths;
+	cb();
+};
