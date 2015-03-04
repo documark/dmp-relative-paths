@@ -1,11 +1,11 @@
 {
-  "name": "documark-relative-paths",
-  "version": "0.2.1",
+  "name": "dmp-relative-paths",
+  "version": "0.2.2",
   "description": "Documark plugin for resolving relative paths.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mauvm/documark-relative-paths.git"
+    "url": "https://github.com/mauvm/dmp-relative-paths.git"
   },
   "keywords": [
     "documark",
@@ -18,7 +18,7 @@
   "author": "Maurits van Mastrigt <maurits@nerdieworks.nl>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mauvm/documark-relative-paths/issues"
+    "url": "https://github.com/mauvm/dmp-relative-paths/issues"
   },
-  "homepage": "https://github.com/mauvm/documark-relative-paths"
+  "homepage": "https://github.com/mauvm/dmp-relative-paths"
 }

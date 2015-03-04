@@ -2,7 +2,7 @@ var fs       = require('fs');
 var path     = require('path');
 var absolute = /^(\/|http)/;
 
-module.exports = function relativePaths ($, document, cb) {
+module.exports = function dmpRelativePaths ($, document, done) {
 	var basePath = document.path();
 
 	$('[src], [href]').each(function () {
@@ -18,5 +18,5 @@ module.exports = function relativePaths ($, document, cb) {
 		}
 	});
 
-	cb();
+	done();
 };
