@@ -1,7 +1,7 @@
 {
   "name": "documark-relative-paths",
-  "version": "0.2.0",
-  "description": "Documark plugin for resolving relative links.",
+  "version": "0.2.1",
+  "description": "Documark plugin for resolving relative paths.",
   "main": "index.js",
   "repository": {
     "type": "git",
