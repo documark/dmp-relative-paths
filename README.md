@@ -1,7 +1,7 @@
 # Documark Relative Paths
 
 [![npm version](https://badge.fury.io/js/dmp-relative-paths.svg)](http://badge.fury.io/js/dmp-relative-paths)
-[![dependency status](https://david-dm.org/mauvm/dmp-relative-paths.svg)](https://david-dm.org/mauvm)
+[![dependency status](https://david-dm.org/documark/dmp-relative-paths.svg)](https://david-dm.org/documark/dmp-relative-paths)
 
 > Documark plugin for resolving relative paths.
 
